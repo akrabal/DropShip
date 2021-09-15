@@ -85,7 +85,7 @@ module.exports = {
                     if(UserCreate) {
     
                         return response.status(200).json({
-                            User: User
+                            User: UserCreate
                         })
                     } else {
     
