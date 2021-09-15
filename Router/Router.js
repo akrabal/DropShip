@@ -24,7 +24,8 @@ module.exports = (() => {
 
 
     // User
-    api.route('/users/login').post(User.signIn)
+    api.route('/users/register').post(User.register) // S'enregistrer
+    api.route('/users/login').post(User.signIn) // Se connecter
 
 
     // Admin
