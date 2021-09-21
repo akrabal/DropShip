@@ -2,6 +2,7 @@ let express = require('express')
 let Home = require('../Class/Home')
 let Category = require('../Class/Category')
 let Product = require('../Class/Product')
+let User = require('../Class/User')
 
 module.exports = (() => {
 
@@ -23,7 +24,8 @@ module.exports = (() => {
 
 
     // User
-    api.route('/users/')
+    api.route('/users/register').post(User.register) // S'enregistrer
+    api.route('/users/login').post(User.signIn) // Se connecter
 
 
     // Admin

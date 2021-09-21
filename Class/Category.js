@@ -17,7 +17,7 @@ module.exports = {
         })
 
         if(Category) {
-            return response.json(Category)
+            return response.status(200).json(Category)
         }
     }, 
 
@@ -34,5 +34,9 @@ module.exports = {
                 libelle: libelle
             }
         }) 
+
+        if(Category) {
+            return response.status(200).json(Category)
+        }
     }
 }

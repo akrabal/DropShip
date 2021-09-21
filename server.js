@@ -1,6 +1,6 @@
 // Requires
 let express = require('express')
-let body = require('body-parser')
+let bodyParser = require('body-parser')
 let Router = require('./Router/Router')
 
 //Uses && Variables
@@ -8,9 +8,9 @@ let app = express()
 
 
 // Middlewares
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 app.use('/api/', Router)
-app.use(body.urlencoded({extended: true}))
-app.use(body.json())
 
 
 // Listen
